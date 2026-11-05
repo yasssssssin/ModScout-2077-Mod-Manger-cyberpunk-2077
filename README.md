@@ -6,6 +6,38 @@
 </p>
 
 <p align="center">
+  <img src="assets/logo.png" alt="ModScout 2077 logo" width="100%">
+</p>
+
+## Screenshots
+
+<p align="center">
+  <img src="assets/library.png" alt="ModScout 2077 mod library" width="100%">
+  <br><em>Library — scan, search, organize and toggle your installed mods.</em>
+</p>
+
+<p align="center">
+  <img src="assets/updates.png" alt="ModScout 2077 updates" width="100%">
+  <br><em>Updates — compare installed versions with available Nexus versions.</em>
+</p>
+
+<p align="center">
+  <img src="assets/browse-nexus.png" alt="Browse Nexus Mods inside ModScout 2077" width="100%">
+  <br><em>Browse Nexus — discover mods without leaving the application.</em>
+</p>
+
+<p align="center">
+  <img src="assets/tools.png" alt="ModScout 2077 tools menu" width="100%">
+  <br><em>Tools — access instance management, history, backups and troubleshooting.</em>
+</p>
+
+<p align="center">
+  <img src="assets/mod-context-menu.png" alt="ModScout 2077 mod actions" width="100%">
+  <br><em>Mod actions — manage links, updates, notes, colours and grouping.</em>
+</p>
+
+
+<p align="center">
   <a href="https://github.com/yasssssssin/ModScout-2077-Mod-Manger-cyberpunk-2077/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
   <img alt="Platform" src="https://img.shields.io/badge/platform-Windows-0078D6">
   <img alt="Version" src="https://img.shields.io/badge/version-3.7-informational">
