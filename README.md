@@ -12,13 +12,13 @@
   <img alt="Language" src="https://img.shields.io/badge/language-Python-3776AB">
 </p>
 
-## Download
+## Get ModScout
 
-**[Download ModScout2077.exe](https://github.com/yasssssssin/ModScout-2077-Mod-Manger-cyberpunk-2077/raw/refs/heads/main/ModScout2077.exe)**
+ModScout is distributed as a single Windows executable. Check the **[Releases page](https://github.com/yasssssssin/ModScout-2077-Mod-Manger-cyberpunk-2077/releases)** for published downloads.
 
-The standalone executable is intended to run on Windows without a separate Python installation. Download it, place it somewhere you can easily find, and launch it. Windows may show a security prompt for an independently distributed executable; only run software you trust.
+To build it yourself, follow the instructions below. The repository intentionally contains the source and build script rather than generated PyInstaller output.
 
-## What it does
+## Features
 
 - **Finds manually installed mods.** Scans common Cyberpunk 2077 mod locations and groups related files into mod entries.
 - **Matches mods to Nexus Mods.** Uses conservative automatic matching; uncertain matches are presented as candidates for you to verify.
@@ -33,34 +33,23 @@ The standalone executable is intended to run on Windows without a separate Pytho
 
 Features that interact with Nexus Mods require your own Nexus Mods API key. Browse images use the optional Pillow library; without it, the app still works, but some images may not display.
 
-## Getting started
-
-1. Download **[ModScout2077.exe](https://github.com/yasssssssin/ModScout-2077-Mod-Manger-cyberpunk-2077/raw/refs/heads/main/ModScout2077.exe)**.
-2. Run the executable.
-3. Point ModScout to your Cyberpunk 2077 game folder when prompted.
-4. Add your personal Nexus Mods API key in the app's settings.
-5. Scan your installed mods and review any uncertain matches before relying on them.
-
-Your API key is stored locally in `~/.cp2077_mod_toggle.json`. The application documentation in the source states that it is sent to the Nexus Mods API. **Do not share this configuration file or publish your API key.**
-
-## Build from source
+## Build from source (Windows)
 
 ### Requirements
 
 - Windows
 - Python 3.10 or newer recommended
 - Internet access for installing build tools
-- Pillow (optional; enables broader image support in Browse Nexus)
 
 ### Build
 
 1. Install Python from [python.org](https://www.python.org/downloads/) and enable **Add Python to PATH** during setup.
-2. Download or clone this repository.
-3. Keep `cp2077_mod_toggle.py`, `modscout.ico`, and `build_exe.bat` in the same folder.
+2. Download this repository using **Code → Download ZIP**, then extract it.
+3. Keep `cp2077_mod_toggle.py`, `build_exe.bat`, and `modscout.ico` together in the extracted folder.
 4. Double-click `build_exe.bat`.
-5. When the build finishes, find the executable in the generated `dist` folder.
+5. When the build finishes, find `ModScout2077.exe` in the generated `dist` folder.
 
-The build script installs PyInstaller and attempts to install Pillow. If Pillow cannot be installed, it continues with reduced image support.
+The build script installs PyInstaller and attempts to install Pillow. Pillow enables mod images in Browse Nexus; if it cannot be installed, the application still builds with reduced image support.
 
 You can also run the Python application directly:
 
@@ -68,28 +57,38 @@ You can also run the Python application directly:
 python cp2077_mod_toggle.py
 ```
 
+## Nexus Mods API key
+
+Use your own Nexus Mods API key in the app's settings. The application stores its configuration locally in `~/.cp2077_mod_toggle.json` and sends the key to the Nexus Mods API when needed.
+
+**Never share this configuration file or publish your API key.** If you accidentally expose a key, revoke it in your Nexus Mods account and create a replacement.
+
+## Repository layout
+
+```text
+.
+├── cp2077_mod_toggle.py   # Application source
+├── build_exe.bat          # Builds the Windows executable
+├── modscout.ico           # Application icon used by the build script
+├── README.md
+├── LICENSE
+├── SECURITY.md
+└── .gitignore
+```
+
+PyInstaller generates `build/` and `dist/` when you run the build script. These are build artifacts and are intentionally excluded from source control.
+
 ## Safety notes
 
 - Back up your Cyberpunk 2077 folder and mod configuration before making large changes.
 - Review candidate Nexus matches rather than accepting a guess.
-- ModScout's disable/backup workflow is designed to move files rather than simply delete them, but you should still keep your own backups.
-- Use a Nexus API key belonging to you. Never paste it into an issue, discussion, screenshot, or public commit.
-- This is a community project and is not affiliated with CD PROJEKT RED or Nexus Mods.
-
-## Repository contents
-
-| File | Purpose |
-| --- | --- |
-| `cp2077_mod_toggle.py` | Main application source |
-| `ModScout2077.exe` | Standalone Windows build |
-| `build_exe.bat` | Windows build helper |
-| `ModScout2077.spec` | PyInstaller configuration |
-| `modscout.ico` | Application icon |
-| `LICENSE` | MIT license |
+- Keep your own backups before making large-scale changes to a mod setup.
+- Never include API keys, personal paths, or private configuration in public issues or screenshots.
+- ModScout is a community project and is not affiliated with CD PROJEKT RED or Nexus Mods.
 
 ## Feedback and bug reports
 
-Found a bug or have an idea? [Open a GitHub issue](https://github.com/yasssssssin/ModScout-2077-Mod-Manger-cyberpunk-2077/issues). Please include your Windows version, the ModScout version, what you expected, what happened, and relevant error text. **Remove API keys, personal paths, and other private information from logs before posting.**
+Found a bug or have an idea? [Open a GitHub issue](https://github.com/yasssssssin/ModScout-2077-Mod-Manger-cyberpunk-2077/issues). Include your Windows version, ModScout version, what you expected, what happened, and relevant error text. Remove API keys and private information from logs before posting.
 
 ## License
 
