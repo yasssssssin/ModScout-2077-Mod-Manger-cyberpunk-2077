@@ -65,6 +65,10 @@ To build it yourself, follow the instructions below. The repository intentionall
 
 Features that interact with Nexus Mods require your own Nexus Mods API key. Browse images use the optional Pillow library; without it, the app still works, but some images may not display.
 
+## First-launch guide
+
+New to ModScout? Read the **[First-Launch Guide](FIRST-LAUNCH-GUIDE.md)** for help locating your game folder, getting a Nexus API key, scanning existing mods, using instances, and backing up or restoring settings.
+
 ## Build from source (Windows)
 
 ### Requirements
