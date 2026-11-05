@@ -29,12 +29,12 @@ echo Pillow could not be installed. The program will still work,
 echo but Browse Nexus will show fewer pictures.
 
 :build
-rem The icon of the exe: put modscout.ico in this same folder. Without it the exe gets the default icon.
+rem The icon is optional. Keep modscout.ico next to this script.
 set "ICON="
 if exist "modscout.ico" set "ICON=--icon modscout.ico"
 echo.
 if defined ICON echo Using the icon modscout.ico
-if not defined ICON echo No modscout.ico next to this file, so the exe gets the default icon.
+if not defined ICON echo No icon found; using the default application icon.
 echo.
 echo Building the exe...
 %PY% -m PyInstaller --noconfirm --clean --onefile --windowed %ICON% %EXTRA% --name ModScout2077 cp2077_mod_toggle.py
@@ -62,6 +62,7 @@ exit /b 1
 
 :fail
 echo.
-echo Something went wrong. Read the messages above, then tell Claude what they say.
+echo Something went wrong. Read the error messages above and include them
+echo when reporting a build problem.
 pause
 exit /b 1
