@@ -14,7 +14,7 @@
 
 ## Get ModScout
 
-ModScout is distributed as a single Windows executable. Check the **[Releases page](https://github.com/yasssssssin/ModScout-2077-Mod-Manger-cyberpunk-2077/releases)** for published downloads.
+ModScout is distributed as a single Windows executable. Download the Windows build: **[ModScout2077.exe](https://github.com/yasssssssin/ModScout-2077-Mod-Manger-cyberpunk-2077/raw/refs/heads/main/downloads/ModScout2077.exe)**.
 
 To build it yourself, follow the instructions below. The repository intentionally contains the source and build script rather than generated PyInstaller output.
 
